@@ -4,7 +4,7 @@ import { Client } from "@notionhq/client";
 import commands from "./commands";
 import invalidCommand from "./commands/invalidCommand";
 
-import {createGitHubClient} from "./api/gitHubClient";
+import { createGitHubClient, createNotionClient } from "./api";
 import { getEnvValue } from "./utils";
 import { Context } from "./types";
 
@@ -17,7 +17,7 @@ const createContext = (): Context => {
     payload: context.payload,
     api: {
       gitHub: createGitHubClient(githubToken, context),
-      // notion: new Client({auth: notionToken}),
+      notion: createNotionClient(notionToken, context),
     },
   };
 };
