@@ -1,0 +1,13 @@
+name: "@alasco-bot pr supporter"
+description: "React on GitHub actions"
+author: "Vadim Sheydakov <vadim.sheydakov@gmail.com>"
+inputs:
+  github-token:
+    description: "GitHub token"
+    required: true
+  notion-token:
+    description: "Notion api token"
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"

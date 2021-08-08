@@ -1,0 +1,35 @@
+{
+  "name": "@alasco-bot",
+  "version": "0.0.1",
+  "description": "Alasco-Bot to support with GitHub",
+  "keywords": [
+    "alasco",
+    "github",
+    "actions"
+  ],
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shevdrakon/alasco-bot.git"
+  },
+  "author": "Vadim Sheydakov <vadim.sheydakov@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/shevdrakon/alasco-bot/issues"
+  },
+  "homepage": "https://github.com/shevdrakon/alasco-bot#readme",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "pack": "ncc build",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@actions/github": "5.0.0",
+    "@notionhq/client": "0.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "16.4.13",
+    "@vercel/ncc": "0.29.0",
+    "typescript": "4.3.5"
+  }
+}
